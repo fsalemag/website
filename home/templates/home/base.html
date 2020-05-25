@@ -20,7 +20,7 @@
 
 
 	<!-- CSS  -->
-	<link rel="stylesheet" href="{% static "home/css/index.css" %}" >
+	<link rel="stylesheet" href="{% static 'home/css/index.css' %}" >
 
 	<!-- LOAD CUSTOM SOURCES  -->
 	{% block custom_sources %}{% endblock %}
@@ -36,10 +36,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-			  <a class="nav-link" href="{% url 'home-index' %}">Home
-              <span class="sr-only">(current)</span>
-            </a>
+          <li class="nav-item inactive">
+			      <a class="nav-link" href="{% url 'home-index' %}">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'resume-index' %}">Resume</a>
