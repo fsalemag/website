@@ -5,3 +5,5 @@ from django.shortcuts import render
 def index(request):
     return render(request, "resume/index.html")
 
+def download(request):
+    return render(request, "resume/index.html")

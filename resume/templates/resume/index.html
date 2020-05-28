@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block body %}
-<div id="cv" class="container">
+<div id="cv" class="container" >
 	<div class="mainDetails">
 		<div id="headshot" class="">
 			<img src="{% static 'resume/headshot.jpg' %}" alt="Alan Smith" />
@@ -16,20 +16,21 @@
 		
 		<div id="name">
 			<h1 class="">Francisco Salema</h1>
-			<h2 class=" ">Job Title</h2>
+			<h3 class=" ">Back-end Developer</h3>
 		</div>
 		
-		<div id="contactDetails" class=" delayFour">
+		<div id="contactDetails" class="">
 			<ul>
-				<li>e: <a href="mailto:francisco.salema.g@gmail.com" target="_blank">francisco.salema.g@gmail.com</a></li>
-				<li>w: <a href="http://www.bloggs.com">www.bloggs.com</a></li>
-				<li>m: 01234567890</li>
+				<li><a class="btn btn-outline-secondary" style="float: right; margin:-1em -2.5em 0.2em 0" href="{% url "resume-download" %}" download>Download</a></li>
+				<li><a href="mailto:francisco.salema.g@gmail.com" target="_blank">francisco.salema.g@gmail.com</a></li>
+				<li><a href="https://fsalemag.pythonanywhere.com">www.fsalemag.com</a></li>
+				<li>+31 621 262 927</li>
 			</ul>
 		</div>
 		<div class="clear"></div>
 	</div>
 	
-	<div id="mainArea" class="delayFive">
+	<div id="mainArea" class="">
 		<section>
 			<article>
 				<div class="sectionTitle">
@@ -116,14 +117,4 @@
 		
 	</div>
 </div>
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-3753241-1");
-pageTracker._initData();
-pageTracker._trackPageview();
-</script>
 {% endblock %}
