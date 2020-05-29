@@ -36,16 +36,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item inactive">
+          <li class="nav-item {% block home-active %}{% endblock %}">
 			      <a class="nav-link" href="{% url 'home-index' %}">Home</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {% block resume-active %}{% endblock %}">
             <a class="nav-link" href="{% url 'resume-index' %}">Resume</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'blog-index' %}">Blog</a>
-          </li>
-          <li class="nav-item">
+          <li class="nav-item {% block trips-active %}{% endblock %}">
 			  <a class="nav-link" href="{% url 'album-index' %}">Trips</a>
           </li>
         </ul>
