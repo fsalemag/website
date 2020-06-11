@@ -1,5 +1,4 @@
 {% extends "home/base.html" %}
-{% block title %}Home{% endblock %}
 {% block home-active %}active{% endblock %}
 {% block body %}
   <!-- Page Content -->
@@ -7,70 +6,32 @@
 
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
-      <h1 class="display-3">Hey There!</h1>
-      <p class="lead">I am Francisco and I am originally from Portugal. I have decided to create this website in order to allow you to know me better, and to have a place where I can store everything that crosses my mind. Hope you enjoy!</p>
-      <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
-    </header>
-
-    <!-- Page Features -->
-    <div class="row text-center">
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-          <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-          <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-          <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-          <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
-
+      <div style="display: inline;">
+        <span class="display-3">Hey There!</span>
+        <a style="float: right; margin-top: -3em;" href="#" class="btn btn-primary">All posts</a>
     </div>
-    <!-- /.row -->
+    <p class="lead">I am Francisco and I am originally from Portugal. I have decided to create this website in order to allow you to know me better, and to have a place where I can store everything that crosses my mind. Hope you enjoy!</p>
+      
+    </header>
+    <div class="row text-center">
+      {% for post in posts %}
 
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" height=150 src="{{ post.intro_image }}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">{{post.title}}</h4>
+            <p class="card-text">{{post.description}}</p>
+            <p>{{post.image}}</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Full Post</a>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
   </div>
-  <!-- /.container -->
 {% endblock %}
 
